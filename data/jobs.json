@@ -1,0 +1,542 @@
+[
+  {
+    "id": "e7ed631b-2d6f-482f-b5f7-f777dfdc19de",
+    "company": "Stripe",
+    "role": "Backend Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-08T23:03:18.411Z",
+    "updatedAt": "2026-06-08T23:03:18.412Z"
+  },
+  {
+    "id": "aeb00f16-7787-4497-87e0-9127daf41556",
+    "company": "Facebook",
+    "role": "Frontend Engineer",
+    "status": "applied",
+    "appliedDate": "2026-02-01",
+    "createdAt": "2026-06-08T23:06:14.302Z",
+    "updatedAt": "2026-06-08T23:06:14.302Z"
+  },
+  {
+    "id": "226a06f8-1af9-4b05-b2a7-e6d0dd9fef94",
+    "company": "Google",
+    "role": "Machine learning Engineer",
+    "status": "applied",
+    "appliedDate": "2026-02-01",
+    "createdAt": "2026-06-08T23:06:33.839Z",
+    "updatedAt": "2026-06-08T23:06:33.839Z"
+  },
+  {
+    "id": "77a933ed-9bbd-4161-9373-d3f07ecd4866",
+    "company": "Github",
+    "role": "Devops engineer",
+    "status": "rejected",
+    "appliedDate": "2026-02-01",
+    "createdAt": "2026-06-08T23:07:38.252Z",
+    "updatedAt": "2026-06-08T23:07:38.252Z"
+  },
+  {
+    "id": "bdbd8b48-a273-4f76-a66b-461adbdc6968",
+    "company": "Missionsync",
+    "role": "QA tester",
+    "status": "withdrawn",
+    "appliedDate": "2026-06-04",
+    "createdAt": "2026-06-08T23:08:20.061Z",
+    "updatedAt": "2026-06-08T23:08:20.061Z"
+  },
+  {
+    "id": "ef249eba-63f6-4e84-a5b4-9392976efeff",
+    "company": "Stripe",
+    "role": "Backend Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-17T14:21:29.109Z",
+    "updatedAt": "2026-06-17T14:21:29.110Z"
+  },
+  {
+    "id": "1fa9b146-b8a1-4853-9b4d-56026a7f235f",
+    "company": "Google",
+    "role": "Software Engineer",
+    "status": "wishlist",
+    "appliedDate": "2026-06-02",
+    "createdAt": "2026-06-17T14:21:29.127Z",
+    "updatedAt": "2026-06-17T14:21:29.127Z"
+  },
+  {
+    "id": "e05d5279-5096-429a-b0b3-e8601ff5b306",
+    "company": "Meta",
+    "role": "Frontend Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-03",
+    "createdAt": "2026-06-17T14:21:29.140Z",
+    "updatedAt": "2026-06-17T14:21:29.140Z"
+  },
+  {
+    "id": "9fb335ef-ff78-448c-a5e4-ea8c75bfb840",
+    "company": "Amazon",
+    "role": "Cloud Engineer",
+    "status": "interview",
+    "appliedDate": "2026-05-28",
+    "createdAt": "2026-06-17T14:21:29.152Z",
+    "updatedAt": "2026-06-17T14:21:29.152Z"
+  },
+  {
+    "id": "274e497c-c698-45e8-a932-58aa0f551154",
+    "company": "Microsoft",
+    "role": "Full Stack Developer",
+    "status": "offer",
+    "appliedDate": "2026-05-20",
+    "createdAt": "2026-06-17T14:21:29.164Z",
+    "updatedAt": "2026-06-17T14:21:29.164Z"
+  },
+  {
+    "id": "b5104fd5-e24a-49ed-bf5f-dd3ee322fc12",
+    "company": "Netflix",
+    "role": "Platform Engineer",
+    "status": "rejected",
+    "appliedDate": "2026-05-15",
+    "createdAt": "2026-06-17T14:21:29.176Z",
+    "updatedAt": "2026-06-17T14:21:29.176Z"
+  },
+  {
+    "id": "6e357b8e-2b97-4a29-86aa-fe3ebaa1de47",
+    "company": "Paystack",
+    "role": "Backend Developer",
+    "status": "withdrawn",
+    "appliedDate": "2026-05-10",
+    "createdAt": "2026-06-17T14:21:29.188Z",
+    "updatedAt": "2026-06-17T14:21:29.188Z"
+  },
+  {
+    "id": "88fd4be0-015f-4cd1-9099-4cba25f99e77",
+    "company": "Flutterwave",
+    "role": "Software Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-04",
+    "createdAt": "2026-06-17T14:21:29.199Z",
+    "updatedAt": "2026-06-17T14:21:29.199Z"
+  },
+  {
+    "id": "30cd88b1-805a-4c47-b119-421825ceb777",
+    "company": "Moniepoint",
+    "role": "DevOps Engineer",
+    "status": "interview",
+    "appliedDate": "2026-05-25",
+    "createdAt": "2026-06-17T14:21:29.210Z",
+    "updatedAt": "2026-06-17T14:21:29.210Z"
+  },
+  {
+    "id": "169bf94a-894f-4738-a421-74aa9653fe42",
+    "company": "Andela",
+    "role": "Node.js Developer",
+    "status": "wishlist",
+    "appliedDate": "2026-06-05",
+    "createdAt": "2026-06-17T14:21:29.224Z",
+    "updatedAt": "2026-06-17T14:21:29.224Z"
+  },
+  {
+    "id": "5d7a2f5e-1bbd-48a8-a1df-ddc6e675c579",
+    "company": "Interswitch",
+    "role": "Backend Engineer",
+    "status": "offer",
+    "appliedDate": "2026-05-18",
+    "createdAt": "2026-06-17T14:21:29.236Z",
+    "updatedAt": "2026-06-17T14:21:29.236Z"
+  },
+  {
+    "id": "a6d99ef0-9443-419a-8843-b816e54205f1",
+    "company": "GitHub",
+    "role": "Platform Engineer",
+    "status": "rejected",
+    "appliedDate": "2026-05-12",
+    "createdAt": "2026-06-17T14:21:29.247Z",
+    "updatedAt": "2026-06-17T14:21:29.247Z"
+  },
+  {
+    "id": "037b52a3-870c-43f2-bd5b-6ad93e0cca6f",
+    "company": "Shopify",
+    "role": "Ruby Developer",
+    "status": "applied",
+    "appliedDate": "2026-06-06",
+    "createdAt": "2026-06-17T14:21:29.259Z",
+    "updatedAt": "2026-06-17T14:21:29.259Z"
+  },
+  {
+    "id": "47f0349c-f80d-4a17-b9a8-c80696bac9f0",
+    "company": "Oracle",
+    "role": "Java Developer",
+    "status": "withdrawn",
+    "appliedDate": "2026-05-08",
+    "createdAt": "2026-06-17T14:21:29.270Z",
+    "updatedAt": "2026-06-17T14:21:29.270Z"
+  },
+  {
+    "id": "6633f2de-9664-4e7f-b8d7-96c7787aef54",
+    "company": "Salesforce",
+    "role": "Backend Engineer",
+    "status": "interview",
+    "appliedDate": "2026-05-30",
+    "createdAt": "2026-06-17T14:21:29.281Z",
+    "updatedAt": "2026-06-17T14:21:29.281Z"
+  },
+  {
+    "id": "7de1b681-0414-429e-ac5f-a6fda1384543",
+    "company": "Datadog",
+    "role": "Site Reliability Engineer",
+    "status": "offer",
+    "appliedDate": "2026-05-22",
+    "createdAt": "2026-06-17T14:21:29.293Z",
+    "updatedAt": "2026-06-17T14:21:29.293Z"
+  },
+  {
+    "id": "3d0f064e-3238-4753-95d1-1c091c053f08",
+    "company": "Vercel",
+    "role": "Software Engineer",
+    "status": "wishlist",
+    "appliedDate": "2026-06-07",
+    "createdAt": "2026-06-17T14:21:29.304Z",
+    "updatedAt": "2026-06-17T14:21:29.304Z"
+  },
+  {
+    "id": "32248492-cb19-4311-b8d0-af8f3e918494",
+    "company": "Cloudflare",
+    "role": "Systems Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-08",
+    "createdAt": "2026-06-17T14:21:29.315Z",
+    "updatedAt": "2026-06-17T14:21:29.315Z"
+  },
+  {
+    "id": "fa21cd57-1a57-43aa-a5b8-14da95693ed8",
+    "company": "Palantir",
+    "role": "Software Engineer",
+    "status": "rejected",
+    "appliedDate": "2026-05-17",
+    "createdAt": "2026-06-17T14:21:29.326Z",
+    "updatedAt": "2026-06-17T14:21:29.326Z"
+  },
+  {
+    "id": "a7fb4461-f462-4eed-b5b5-485dc6a5ce47",
+    "company": "OpenAI",
+    "role": "Backend Engineer",
+    "status": "interview",
+    "appliedDate": "2026-06-09",
+    "createdAt": "2026-06-17T14:21:29.337Z",
+    "updatedAt": "2026-06-17T14:21:29.337Z"
+  },
+  {
+    "id": "048d80d8-ee0b-4339-9d23-7e3330dc27ad",
+    "company": "Stripe",
+    "role": "Backend Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T14:53:47.773Z",
+    "updatedAt": "2026-06-20T14:53:47.778Z"
+  },
+  {
+    "id": "44add153-5374-4150-92fd-2dbc073f5ec5",
+    "company": "Google",
+    "role": "Software Engineer",
+    "status": "wishlist",
+    "appliedDate": "2026-06-02",
+    "createdAt": "2026-06-20T14:53:47.793Z",
+    "updatedAt": "2026-06-20T14:53:47.793Z"
+  },
+  {
+    "id": "2cfb68a4-a3da-45f8-bcbb-918e52389d69",
+    "company": "Meta",
+    "role": "Frontend Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-03",
+    "createdAt": "2026-06-20T14:53:47.805Z",
+    "updatedAt": "2026-06-20T14:53:47.805Z"
+  },
+  {
+    "id": "03920798-8e52-4abc-b5cf-ca05c051df5b",
+    "company": "Amazon",
+    "role": "Cloud Engineer",
+    "status": "interview",
+    "appliedDate": "2026-05-28",
+    "createdAt": "2026-06-20T14:53:47.817Z",
+    "updatedAt": "2026-06-20T14:53:47.817Z"
+  },
+  {
+    "id": "14676e2b-f7da-45e7-84ea-12179fcb01ee",
+    "company": "Microsoft",
+    "role": "Full Stack Developer",
+    "status": "offer",
+    "appliedDate": "2026-05-20",
+    "createdAt": "2026-06-20T14:53:47.829Z",
+    "updatedAt": "2026-06-20T14:53:47.829Z"
+  },
+  {
+    "id": "8f7bd660-6fc6-43d6-9ef0-492babc9306c",
+    "company": "Netflix",
+    "role": "Platform Engineer",
+    "status": "rejected",
+    "appliedDate": "2026-05-15",
+    "createdAt": "2026-06-20T14:53:47.840Z",
+    "updatedAt": "2026-06-20T14:53:47.840Z"
+  },
+  {
+    "id": "1a16381c-856e-44cf-ac61-569738146f3d",
+    "company": "Paystack",
+    "role": "Backend Developer",
+    "status": "withdrawn",
+    "appliedDate": "2026-05-10",
+    "createdAt": "2026-06-20T14:53:47.852Z",
+    "updatedAt": "2026-06-20T14:53:47.852Z"
+  },
+  {
+    "id": "c4e93db6-17f4-49aa-a611-0837415c8536",
+    "company": "Flutterwave",
+    "role": "Software Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-04",
+    "createdAt": "2026-06-20T14:53:47.864Z",
+    "updatedAt": "2026-06-20T14:53:47.864Z"
+  },
+  {
+    "id": "01871efa-9875-4537-9a18-578bd3644229",
+    "company": "Moniepoint",
+    "role": "DevOps Engineer",
+    "status": "interview",
+    "appliedDate": "2026-05-25",
+    "createdAt": "2026-06-20T14:53:47.875Z",
+    "updatedAt": "2026-06-20T14:53:47.875Z"
+  },
+  {
+    "id": "89ba5ad9-68f6-4333-9b2b-fa688e0ad596",
+    "company": "Andela",
+    "role": "Node.js Developer",
+    "status": "wishlist",
+    "appliedDate": "2026-06-05",
+    "createdAt": "2026-06-20T14:53:47.887Z",
+    "updatedAt": "2026-06-20T14:53:47.887Z"
+  },
+  {
+    "id": "cb67399b-a798-462d-99c4-b48cc53dd4de",
+    "company": "Interswitch",
+    "role": "Backend Engineer",
+    "status": "offer",
+    "appliedDate": "2026-05-18",
+    "createdAt": "2026-06-20T14:53:47.900Z",
+    "updatedAt": "2026-06-20T14:53:47.900Z"
+  },
+  {
+    "id": "dcdb6843-cef3-45d3-935d-195754a500c5",
+    "company": "GitHub",
+    "role": "Platform Engineer",
+    "status": "rejected",
+    "appliedDate": "2026-05-12",
+    "createdAt": "2026-06-20T14:53:47.912Z",
+    "updatedAt": "2026-06-20T14:53:47.912Z"
+  },
+  {
+    "id": "1b1e877b-2573-45ca-94fc-38a9599ff0a8",
+    "company": "Shopify",
+    "role": "Ruby Developer",
+    "status": "applied",
+    "appliedDate": "2026-06-06",
+    "createdAt": "2026-06-20T14:53:47.924Z",
+    "updatedAt": "2026-06-20T14:53:47.924Z"
+  },
+  {
+    "id": "718600e7-9649-4030-ad4f-427ebada99d9",
+    "company": "Oracle",
+    "role": "Java Developer",
+    "status": "withdrawn",
+    "appliedDate": "2026-05-08",
+    "createdAt": "2026-06-20T14:53:47.935Z",
+    "updatedAt": "2026-06-20T14:53:47.935Z"
+  },
+  {
+    "id": "eb774e57-2b20-4f10-b240-9f1f99ad246f",
+    "company": "Salesforce",
+    "role": "Backend Engineer",
+    "status": "interview",
+    "appliedDate": "2026-05-30",
+    "createdAt": "2026-06-20T14:53:47.945Z",
+    "updatedAt": "2026-06-20T14:53:47.945Z"
+  },
+  {
+    "id": "5af74313-d7da-4fa5-b945-ca2d9f5d7a39",
+    "company": "Datadog",
+    "role": "Site Reliability Engineer",
+    "status": "offer",
+    "appliedDate": "2026-05-22",
+    "createdAt": "2026-06-20T14:53:47.957Z",
+    "updatedAt": "2026-06-20T14:53:47.957Z"
+  },
+  {
+    "id": "9ad594a6-b7b8-4b06-84f6-e325dc84e306",
+    "company": "Vercel",
+    "role": "Software Engineer",
+    "status": "wishlist",
+    "appliedDate": "2026-06-07",
+    "createdAt": "2026-06-20T14:53:47.968Z",
+    "updatedAt": "2026-06-20T14:53:47.968Z"
+  },
+  {
+    "id": "e90ff6bd-6639-4cfa-b126-701a4d980cf5",
+    "company": "Cloudflare",
+    "role": "Systems Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-08",
+    "createdAt": "2026-06-20T14:53:47.979Z",
+    "updatedAt": "2026-06-20T14:53:47.979Z"
+  },
+  {
+    "id": "d0a3c46e-978a-4ece-8043-3b0c70a5af5e",
+    "company": "Palantir",
+    "role": "Software Engineer",
+    "status": "rejected",
+    "appliedDate": "2026-05-17",
+    "createdAt": "2026-06-20T14:53:47.990Z",
+    "updatedAt": "2026-06-20T14:53:47.990Z"
+  },
+  {
+    "id": "1da217a0-b471-4740-a5a1-9c21b193217a",
+    "company": "OpenAI",
+    "role": "Backend Engineer",
+    "status": "interview",
+    "appliedDate": "2026-06-09",
+    "createdAt": "2026-06-20T14:53:48.002Z",
+    "updatedAt": "2026-06-20T14:53:48.002Z"
+  },
+  {
+    "id": "c5968633-e03b-4865-91d8-90cbcb5ec829",
+    "company": "Company 1",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:28.989Z",
+    "updatedAt": "2026-06-20T15:03:28.989Z"
+  },
+  {
+    "id": "d7a1b95c-26b5-4027-8bea-cf36e2262559",
+    "company": "Company 2",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.001Z",
+    "updatedAt": "2026-06-20T15:03:29.001Z"
+  },
+  {
+    "id": "8104192e-6cce-4ea3-91a8-37c4712127ee",
+    "company": "Company 3",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.012Z",
+    "updatedAt": "2026-06-20T15:03:29.012Z"
+  },
+  {
+    "id": "66c099b8-2815-4aa4-842a-10aa1f3d150a",
+    "company": "Company 4",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.023Z",
+    "updatedAt": "2026-06-20T15:03:29.023Z"
+  },
+  {
+    "id": "57b3f2a6-5cbd-4311-ab0b-835f65e4715d",
+    "company": "Company 5",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.034Z",
+    "updatedAt": "2026-06-20T15:03:29.034Z"
+  },
+  {
+    "id": "0574b4c6-5364-4343-b15e-f51b629b5da7",
+    "company": "Company 6",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.045Z",
+    "updatedAt": "2026-06-20T15:03:29.045Z"
+  },
+  {
+    "id": "c9292cef-af01-4e46-87ad-b760d1eab0e1",
+    "company": "Company 7",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.055Z",
+    "updatedAt": "2026-06-20T15:03:29.055Z"
+  },
+  {
+    "id": "0729022c-add1-421f-8324-e85d465f23e1",
+    "company": "Company 8",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.064Z",
+    "updatedAt": "2026-06-20T15:03:29.064Z"
+  },
+  {
+    "id": "3473cc8d-5402-41dd-a505-2bce5deb5efd",
+    "company": "Company 9",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.073Z",
+    "updatedAt": "2026-06-20T15:03:29.073Z"
+  },
+  {
+    "id": "4ecdfbf5-ed84-4c40-aa3c-9acd04edf5e7",
+    "company": "Company 10",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.083Z",
+    "updatedAt": "2026-06-20T15:03:29.083Z"
+  },
+  {
+    "id": "5c4b3384-f812-40ec-81c3-a371165f8ff0",
+    "company": "Company 11",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.093Z",
+    "updatedAt": "2026-06-20T15:03:29.093Z"
+  },
+  {
+    "id": "c5bbee45-601b-4f8a-bdb5-41223e596d40",
+    "company": "Company 12",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.103Z",
+    "updatedAt": "2026-06-20T15:03:29.103Z"
+  },
+  {
+    "id": "6b7b433a-6895-499e-99ac-fa72b6b01eb7",
+    "company": "Company 13",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.115Z",
+    "updatedAt": "2026-06-20T15:03:29.115Z"
+  },
+  {
+    "id": "18467564-9de1-424e-be06-150fca1a7680",
+    "company": "Company 14",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.128Z",
+    "updatedAt": "2026-06-20T15:03:29.128Z"
+  },
+  {
+    "id": "898182ec-22ef-4f68-b4ea-8a8e38fefb36",
+    "company": "Company 15",
+    "role": "Engineer",
+    "status": "applied",
+    "appliedDate": "2026-06-01",
+    "createdAt": "2026-06-20T15:03:29.139Z",
+    "updatedAt": "2026-06-20T15:03:29.139Z"
+  }
+]
