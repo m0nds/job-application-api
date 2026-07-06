@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { readJobs, writeJobs } from "./db";
+import { readJobs, findJobById, createJob, updateJob, deleteJob } from "./db"
 import { validateCreateJob, validateUpdateJob } from "./validation";
 import { AppError, asyncHandler } from "./errorHandler";
 import { v4 as uuidv4 } from "uuid";
+
 
 const router = Router();
 
@@ -11,7 +12,7 @@ const router = Router();
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const jobs = await readJobs();
+    const jobs = readJobs();
     let result = jobs;
 
     const statusQuery = req.query.status;
@@ -49,7 +50,7 @@ router.get(
 router.get(
   "/stats",
   asyncHandler(async (req, res) => {
-    const jobs = await readJobs();
+    const jobs = readJobs();
 
     const byStatus = jobs.reduce(
       (acc, job) => {
@@ -76,8 +77,7 @@ router.get(
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
-    const jobs = await readJobs();
-    const findJobs = jobs.find((job) => job.id === req.params.id);
+    const findJobs = findJobById(req.params.id as string);
     if (!findJobs) {
       throw new AppError("Job not found", 404);
     }
@@ -100,9 +100,7 @@ router.post(
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    const jobs = await readJobs();
-    jobs.push(newJobData);
-    await writeJobs(jobs);
+    createJob(newJobData);
 
     res.status(201).json(newJobData);
   }),
@@ -119,22 +117,19 @@ router.patch(
       throw new AppError(result.errors.join("; "), 422);
     }
 
-    const jobs = await readJobs();
+const existingJob = findJobById(req.params.id as string)
 
-    const indexOfJob = jobs.findIndex((job) => job.id === req.params.id);
-    // findIndex returns -1 when nothing is found.
-    if (indexOfJob === -1) {
-      throw new AppError("Job not found", 404);
-    }
-    const updatedJob = {
-      ...jobs[indexOfJob], // // should be — spread the specific job at that index
-      ...result.data,
-      updatedAt: new Date().toISOString(),
-    };
+if (!existingJob) {
+  throw new AppError("Job not found", 404)
+}
 
-    jobs[indexOfJob] = updatedJob;
+const updatedJob = {
+  ...existingJob,
+  ...result.data,
+  updatedAt: new Date().toISOString()
+}
 
-    await writeJobs(jobs);
+    updateJob(req.params.id as string, updatedJob);
     res.status(200).json(updatedJob);
   }),
 );
@@ -144,15 +139,13 @@ router.patch(
 router.delete(
   "/:id",
   asyncHandler(async (req, res) => {
-    const jobs = await readJobs();
-    const indexOfJob = jobs.findIndex((job) => job.id === req.params.id);
-    if (indexOfJob === -1) {
-      throw new AppError("Job not found", 404);
-    }
 
-    jobs.splice(indexOfJob, 1);
-    await writeJobs(jobs);
-    res.status(204).send();
+  const job = findJobById(req.params.id as string)
+if (!job) {
+  throw new AppError("Job not found", 404)
+}
+deleteJob(req.params.id as string)
+res.status(204).send()
   }),
 );
 

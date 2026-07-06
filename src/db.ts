@@ -1,24 +1,47 @@
-import fs from "fs/promises";
-import path from "path";
 import { Job } from "./types";
+import db from "./database";
 
-const DB_PATH = path.join(__dirname, "..", "data", "jobs.json");
+export const readJobs = (): Job[] =>
+  db.prepare("SELECT * FROM jobs").all() as Job[];
 
-export const readJobs = async (): Promise<Job[]> => {
+export const findJobById = (id: string): Job | undefined =>
+  db.prepare("SELECT * FROM jobs WHERE id = ?").get(id) as Job | undefined;
 
-  try {
-   const raw = await fs.readFile(DB_PATH, "utf8");
-   return JSON.parse(raw) as Job[]
-  } catch (error) {
-    if((error as NodeJS.ErrnoException).code === "ENOENT") {
-        return []
-    }
-    throw error
-  }
+export const createJob = (job: Job): void => {
+  db.prepare(
+    `
+        INSERT INTO jobs (id, company, role, status, appliedDate, notes, createdAt, updatedAt)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        `,
+  ).run(
+    job.id,
+    job.company,
+    job.role,
+    job.status,
+    job.appliedDate,
+    job.notes ?? null,
+    job.createdAt,
+    job.updatedAt,
+  );
 };
 
-export const writeJobs = async (jobs: Job[]): Promise<void> => {
-    const data = JSON.stringify(jobs, null, 2);
-     await fs.writeFile(DB_PATH, data, "utf8");
+export const updateJob = (id: string, job: Partial<Job>): void => {
+  // you dont want to update id, createdAt
+  const immutable = ["id", "createdAt"];
+  const allowedJobs = Object.keys(job).filter((k) => !immutable.includes(k));
+  const query = allowedJobs.map((k) => `${k} = ?`).join(", ");
+const values = [
+  ...allowedJobs.map(k => (job as Record<string, unknown>)[k] ?? null),
+  id
+]
+
+  db.prepare(`UPDATE jobs SET ${query} WHERE id = ?`).run(...values);
 };
 
+export const deleteJob = (id: string): void => {
+  db.prepare(
+    `
+        DELETE FROM jobs WHERE id = ?
+    `,
+  ).run(id);
+};
