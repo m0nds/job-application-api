@@ -12,7 +12,7 @@ const router = Router();
 router.get(
   "/",
   asyncHandler(async (req, res) => {
-    const jobs = readJobs();
+    const jobs = await readJobs();
     let result = jobs;
 
     const statusQuery = req.query.status;
@@ -50,7 +50,7 @@ router.get(
 router.get(
   "/stats",
   asyncHandler(async (req, res) => {
-    const jobs = readJobs();
+    const jobs = await readJobs();
 
     const byStatus = jobs.reduce(
       (acc, job) => {
@@ -77,7 +77,7 @@ router.get(
 router.get(
   "/:id",
   asyncHandler(async (req, res) => {
-    const findJobs = findJobById(req.params.id as string);
+    const findJobs = await findJobById(req.params.id as string);
     if (!findJobs) {
       throw new AppError("Job not found", 404);
     }
@@ -100,7 +100,7 @@ router.post(
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     };
-    createJob(newJobData);
+    await createJob(newJobData);
 
     res.status(201).json(newJobData);
   }),
@@ -117,7 +117,7 @@ router.patch(
       throw new AppError(result.errors.join("; "), 422);
     }
 
-const existingJob = findJobById(req.params.id as string)
+const existingJob = await findJobById(req.params.id as string)
 
 if (!existingJob) {
   throw new AppError("Job not found", 404)
@@ -129,7 +129,7 @@ const updatedJob = {
   updatedAt: new Date().toISOString()
 }
 
-    updateJob(req.params.id as string, updatedJob);
+    await updateJob(req.params.id as string, updatedJob);
     res.status(200).json(updatedJob);
   }),
 );
@@ -140,11 +140,11 @@ router.delete(
   "/:id",
   asyncHandler(async (req, res) => {
 
-  const job = findJobById(req.params.id as string)
+  const job = await findJobById(req.params.id as string)
 if (!job) {
   throw new AppError("Job not found", 404)
 }
-deleteJob(req.params.id as string)
+await deleteJob(req.params.id as string)
 res.status(204).send()
   }),
 );

@@ -1,10 +1,12 @@
+import "dotenv/config"
 import express, { Application } from "express";
 import router from "./routes";
 import { errorHandler } from "./errorHandler";
+import {prisma} from './db'
 
 const app: Application = express();
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000
 
 // 1. Register express.json() middleware
 app.use(express.json());
@@ -24,6 +26,11 @@ process.on("uncaughtException", (error) => {
   console.error("Uncaught exception:", error);
   process.exit(1);
 });
+
+process.on("SIGINT", async () => {
+    await prisma.$disconnect()
+    process.exit(0)
+})
 
 // 4. Listen on port 3000
 app.listen(PORT, () => {

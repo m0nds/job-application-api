@@ -3,3 +3,5 @@ dist/
 data/jobs.json
 .env
 *.log
+
+/src/generated/prisma

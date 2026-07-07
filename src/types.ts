@@ -15,6 +15,7 @@ export interface Job {
   notes?: string;
   createdAt: string;
   updatedAt: string;
+  jobUrl?: string;
 }
 
 export interface CreateJobInput {
@@ -23,6 +24,7 @@ export interface CreateJobInput {
   status: ApplicationStatus;
   appliedDate: string;
   notes?: string;
+  jobUrl?: string;
 }
 
 // Partial<T> makes every field optional — perfect for PATCH

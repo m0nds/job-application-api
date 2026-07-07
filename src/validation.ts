@@ -38,6 +38,11 @@ export const validateCreateJob = (
   ) {
     errors.push(`status must be one of: ${VALID_STATUSES.join(", ")}`);
   }
+  if (b.jobUrl !== undefined) {
+    if (typeof b.jobUrl !== "string" || b.jobUrl.trim() === "") {
+      errors.push("jobUrl must be a non-empty string");
+    }
+  }
 
   if (errors.length > 0) {
     return { valid: false, errors };
@@ -49,6 +54,7 @@ export const validateCreateJob = (
       role: b.role as string,
       status: b.status as ApplicationStatus,
       appliedDate: b.appliedDate as string,
+      jobUrl: b.jobUrl as string | undefined,
     },
   };
 };
@@ -63,7 +69,14 @@ export const validateUpdateJob = (
   }
 
   const b = body as Record<string, unknown>;
-  const allowedKeys = ["company", "role", "status", "appliedDate", "notes"];
+  const allowedKeys = [
+    "company",
+    "role",
+    "status",
+    "appliedDate",
+    "notes",
+    "jobUrl",
+  ];
   const providedKeys = Object.keys(b).filter((k) => allowedKeys.includes(k));
   if (providedKeys.length === 0) {
     return { valid: false, errors: ["Please update one of the fields"] };
@@ -93,6 +106,11 @@ export const validateUpdateJob = (
       errors.push(`status must be one of: ${VALID_STATUSES.join(", ")}`);
     }
   }
+  if (b.jobUrl !== undefined) {
+    if (typeof b.jobUrl !== "string" || b.jobUrl.trim() === "") {
+      errors.push("jobUrl must be a non-empty string");
+    }
+  }
 
   if (errors.length > 0) {
     return { valid: false, errors };
@@ -103,6 +121,7 @@ export const validateUpdateJob = (
   if (b.role) data.role = b.role as string;
   if (b.status) data.status = b.status as ApplicationStatus;
   if (b.appliedDate) data.appliedDate = b.appliedDate as string;
+  if (b.jobUrl) data.jobUrl = b.jobUrl as string;
 
   return {
     valid: true,
