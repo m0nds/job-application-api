@@ -6,13 +6,14 @@ import {prisma} from './db'
 import authRouter from './auth/authRoutes'
 import { authenticate } from './auth/authMiddleware'
 import cookieParser from "cookie-parser"
-
+import helmet from "helmet"
 
 const app: Application = express();
 
 const PORT = process.env.PORT || 3000
 
 // 1. Register express.json() middleware
+app.use(helmet()) 
 app.use(express.json());
 app.use(cookieParser())
 
@@ -21,8 +22,14 @@ app.use("/api/jobs", authenticate, router);
 
 app.use("/api/auth", authRouter)
 
+app.get("/health", (_req, res) => {
+  res.json({ status: "ok", timestamp: new Date().toISOString() })
+})
+
+
 // 3. Register errorHandler middleware (Must be registered after routes)
 app.use(errorHandler);
+app.disable("x-powered-by")
 
 
 process.on("unhandledRejection", (reason) => {
