@@ -7,6 +7,7 @@ declare global {
         sub: string    // userId
         email: string
       }
+        requestId?: string  // add this
     }
   }
 }

@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction } from "express";
+import logger from "./logger";
 
 export class AppError extends Error {
   constructor(
@@ -18,16 +19,18 @@ export const errorHandler = (
   _next: NextFunction,
 ) => {
   if (err instanceof AppError) {
-    res.status(err.statusCode).json({error: err.message})
-    return
+    res.status(err.statusCode).json({ error: err.message });
+    return;
   } else {
-    console.error(err.stack)
-    res.status(500).json({error: "Please try again!"})
+    logger.error({ err }, "Unexpected error");
+    res.status(500).json({ error: "Please try again!" });
   }
 };
 
-export const asyncHandler = (fn: (req:Request, res:Response, next:NextFunction) => Promise<void>) => {
-    return (req:Request, res:Response, next:NextFunction) => {
-        fn(req, res, next).catch(next)
-    }
-}
+export const asyncHandler = (
+  fn: (req: Request, res: Response, next: NextFunction) => Promise<void>,
+) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    fn(req, res, next).catch(next);
+  };
+};

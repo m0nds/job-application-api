@@ -1,0 +1,7 @@
+node_modules
+dist
+.env
+*.log
+data/jobs.db
+data/jobs.db-shm
+data/jobs.db-wal

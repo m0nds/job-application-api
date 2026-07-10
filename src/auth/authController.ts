@@ -316,6 +316,9 @@ export const refreshToken = asyncHandler(
 
     try {
       const decoded = verifyRefreshToken(refreshToken);
+      if (typeof decoded === "string") {
+        throw new AppError("Invalid or expired refresh token", 401);
+      }
       req.user = { sub: decoded.sub as string, email: decoded.email as string };
       const userId = decoded.sub as string;
       const user = await prisma.user.findUnique({ where: { id: userId } });
