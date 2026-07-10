@@ -13,8 +13,8 @@ export interface Job {
   status: ApplicationStatus;
   appliedDate: string;  
   notes?: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt: Date;
   jobUrl?: string;
 }
 
