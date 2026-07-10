@@ -1,8 +1,11 @@
 import { Request, Response, NextFunction } from "express"
 import { AppError } from "../errorHandler"
 import { verifyAccessToken } from "./jwtUtils"
+import redis from '../redis'
+import {asyncHandler} from '../errorHandler'
 
-export const authenticate = (req: Request, res: Response, next: NextFunction) => {
+export const authenticate = asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
+
    const authorizationHeader = req.headers.authorization
 
    if(!authorizationHeader) {
@@ -16,6 +19,11 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
     throw new AppError("Invalid token format", 401)
   }
 
+      const isBlacklisted = await redis.get(`blacklist:${token}`)
+      if(isBlacklisted) {
+        throw new AppError('Token has been invalidated', 401)
+      }
+
   try {
     const decoded = verifyAccessToken(token)
     req.user = { sub: decoded.sub as string, email: decoded.email as string }
@@ -24,4 +32,4 @@ export const authenticate = (req: Request, res: Response, next: NextFunction) =>
   }
 
   next()
-}
+})

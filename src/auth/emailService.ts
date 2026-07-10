@@ -1,14 +1,15 @@
-import { Resend } from "resend"
+import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-const BASE_URL = process.env.BASE_URL || "http://localhost:3000"
+const resend = new Resend(process.env.RESEND_API_KEY);
+const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
+
 
 export const sendVerificationEmail = async (
   email: string,
   name: string,
-  token: string
+  token: string,
 ): Promise<void> => {
-const verificationUrl = `${BASE_URL}/api/auth/verify?token=${token}`
+  const verificationUrl = `${BASE_URL}/api/auth/verify?token=${token}`;
 
   await resend.emails.send({
     from: "onboarding@resend.dev", // Resend's test sender — works without a domain
@@ -20,6 +21,27 @@ const verificationUrl = `${BASE_URL}/api/auth/verify?token=${token}`
       <a href="${verificationUrl}">Verify Email</a>
       <p>This link expires in 24 hours.</p>
       <p>If you didn't create an account, ignore this email.</p>
-    `
-  })
-}
+    `,
+  });
+};
+
+export const sendResetEmail = async (
+  email: string,
+  name: string,
+  token: string,
+): Promise<void> => {
+const resetUrl = `${process.env.BASE_URL}/reset-password?token=${token}`
+
+  await resend.emails.send({
+    from: "onboarding@resend.dev",
+    to: email,
+    subject: "Reset your password — Job Tracker",
+    html: `
+      <h2>Hi ${name},</h2>
+      <p>You requested a password reset. Click the link below:</p>
+      <a href="${resetUrl}">Reset Password</a>
+      <p>This link expires in 1 hour.</p>
+      <p>If you didn't request this, ignore this email. Your password won't change.</p>
+    `,
+  });
+};

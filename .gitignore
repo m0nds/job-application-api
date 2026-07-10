@@ -5,3 +5,6 @@ data/jobs.json
 *.log
 
 /src/generated/prisma
+data/jobs.db
+data/jobs.db-shm
+data/jobs.db-wal

@@ -5,6 +5,8 @@ import { errorHandler } from "./errorHandler";
 import {prisma} from './db'
 import authRouter from './auth/authRoutes'
 import { authenticate } from './auth/authMiddleware'
+import cookieParser from "cookie-parser"
+
 
 const app: Application = express();
 
@@ -12,6 +14,7 @@ const PORT = process.env.PORT || 3000
 
 // 1. Register express.json() middleware
 app.use(express.json());
+app.use(cookieParser())
 
 // protect all job routes — authenticate runs before any job handler
 app.use("/api/jobs", authenticate, router);
